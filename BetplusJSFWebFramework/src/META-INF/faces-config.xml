@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+
+	<!-- Resurce bundle management -->
+	<application>
+        <resource-bundle>
+	        <base-name>resources.messages</base-name>
+	        <var>msgs</var>
+         </resource-bundle>
+         <resource-bundle>
+	        <base-name>resources.config</base-name>
+	        <var>config</var>
+         </resource-bundle>
+         <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>en</supported-locale>
+            <supported-locale>it</supported-locale>
+          </locale-config>
+	</application>
+    
+    <!-- Managed beans -->
+	<managed-bean>
+	  <managed-bean-name>languageBean</managed-bean-name>
+	  <managed-bean-class>it.betplus.web.framework.managedbeans.LanguageBean</managed-bean-class>
+	  <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean> 
+     
+    <managed-bean>
+	  <managed-bean-name>utilityBean</managed-bean-name>
+	  <managed-bean-class>it.betplus.web.framework.managedbeans.UtilityBean</managed-bean-class>
+	  <managed-bean-scope>session</managed-bean-scope>
+    </managed-bean> 
+    
+    <converter>
+  	<converter-id>DoubleConverter</converter-id>
+  	<converter-class>it.betplus.web.framework.converter.DoubleConverter</converter-class>
+	</converter>
+	
+    <converter>
+  	<converter-id>IntegerConverter</converter-id>
+  	<converter-class>it.betplus.web.framework.converter.IntegerConverter</converter-class>
+	</converter>
+	
+     <converter>
+  	<converter-id>LongConverter</converter-id>
+  	<converter-class>it.betplus.web.framework.converter.LongConverter</converter-class>
+	</converter>
+	
+
+	<validator>
+    <validator-id>AlphaNumericNonWhiteSpaceValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.AlphaNumericNonWhiteSpaceValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>AlphaNumericWithWhiteSpacesValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.AlphaNumericWithWhiteSpacesValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>AnyCharacterNonWhiteSpaceValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.AnyCharacterNonWhiteSpaceValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>BirthDayValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.BirthDayValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>EmailAddressValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.EmailAddressValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>IpAddressValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.IpAddressValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>MacAddressValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.MacAddressValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>PhoneNumberValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.PhoneNumberValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>UnsignedDoubleValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.UnsignedDoubleValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>IntegerValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.IntegerValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>UnsignedIntegerValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.UnsignedIntegerValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>UnsignedLongValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.UnsignedLongValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>LongValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.LongValidator</validator-class>
+  	</validator>
+  	
+	<validator>
+    <validator-id>StringNumericOnlyValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.StringNumericOnlyValidator</validator-class>
+  	</validator>
+  	
+  	<validator>
+    <validator-id>DateValidator</validator-id>
+    <validator-class>it.betplus.web.framework.validator.DateValidator</validator-class>
+  	</validator>
+  	
+</faces-config>
